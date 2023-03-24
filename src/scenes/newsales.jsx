@@ -1,8 +1,8 @@
 import styles from "./inventory.module.css"
-import Intop from "../components/sections/inventory/intop"
+import Booknav from "../components/nav/booknav"
 import Salesside from "../components/sections/inventory/salesside"
 import Newsales from "../components/sections/inventory/newsale"
-
+import Intop from "../components/sections/inventory/intop"
 
 
 const Salesnew = () => {
@@ -12,7 +12,12 @@ const Salesnew = () => {
                 <Salesside />
             </div>
             <div className={styles.content}>
-                <Intop />
+                    <div className={styles.desktop}>
+                        <Intop />
+                    </div>
+                    <div className={styles.mobile}>
+                        <Booknav />
+                    </div>
                 <div className="controlwidth">
                     <Newsales />
                 </div>

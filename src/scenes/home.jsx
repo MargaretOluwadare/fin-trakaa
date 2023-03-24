@@ -8,12 +8,14 @@ import SixthSection from "../components/sections/sixth"
 import Seventhsection from "../components/sections/seventh"
 import Footer from "../components/sections/footer"
 import Mobilenav from "../components/nav/mobilenav"
+import Preloader from "./preloader"
 
 
 
 const Home = () => {
     return(
         <>
+            <Preloader />
             <Mobilenav />
             <Mainnav />
             <Mainhero />

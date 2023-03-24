@@ -1,0 +1,76 @@
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+  }
+  
+  .preloader-container.show {
+    width: 100vw;
+  }
+  
+  .preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .preloader-spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid rgb(29, 25, 240,0.5);
+    border-top-color: transparent;
+    animation: preloader-spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  .preloader-text {
+    font-family: 'YourFeminineFont', cursive; /* replace 'YourFeminineFont' with the name of your chosen font */
+    font-size: 36px; /* adjust the font size to your liking */
+    color: #1D19F0;; /* adjust the color to your liking */
+    animation: appear 1s linear; /* add an animation to the text */
+  }
+  
+  
+  
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes preloader-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
